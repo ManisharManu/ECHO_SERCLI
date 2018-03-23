@@ -12,3 +12,7 @@ public static void main(String[] args)
 			BufferedReader r = new BufferedReader(new InputStreamReader(s.getInputStream()));
 			PrintWriter w = new PrintWriter(s.getOutputStream(), true);
 			BufferedReader con = new BufferedReader(new InputStreamReader(System.in));
+			String line;
+			do
+			{
+				line = r.readLine();
