@@ -1,7 +1,7 @@
 import java.io.*;
 import java.net.*;
 
-public class EClient
+public class ECclient
 {
 public static void main(String[] args)
 	{
@@ -16,3 +16,7 @@ public static void main(String[] args)
 			do
 			{
 				line = r.readLine();
+				if ( line != null )
+					System.out.println(line);
+				line = con.readLine();
+				w.println(line);
