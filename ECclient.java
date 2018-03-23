@@ -1,9 +1,9 @@
 import java.io.*;
 import java.net.*;
 
-public class ECclient
+public class EchoClient
 {
-public static void main(String[] args)
+	public static void main(String[] args)
 	{
 		try
     {
@@ -20,7 +20,7 @@ public static void main(String[] args)
 					System.out.println(line);
 				line = con.readLine();
 				w.println(line);
-				}
+			}
 			while ( !line.trim().equals("bye") );
 		}
 		catch (Exception err)
