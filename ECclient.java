@@ -20,3 +20,12 @@ public static void main(String[] args)
 					System.out.println(line);
 				line = con.readLine();
 				w.println(line);
+				}
+			while ( !line.trim().equals("bye") );
+		}
+		catch (Exception err)
+		{
+			System.err.println(err);
+		}
+	}
+}
