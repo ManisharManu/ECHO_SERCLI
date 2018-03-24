@@ -29,3 +29,13 @@ public EchoServer(int portnum)
 				BufferedReader con = new BufferedReader(new InputStreamReader(System.in));
 				String line;
 				do
+				{
+					line = r.readLine();
+					if ( line != null )
+						System.out.println(line);
+					line = con.readLine();
+					w.println(line);
+				}
+				while ( !line.trim().equals("Ok") );
+			}
+		}
