@@ -3,7 +3,7 @@ import java.net.*;
 
 public class EServer
 {
-public EchoServer(int portnum)
+public EServer(int portnum)
 	{
 		try
 		{
@@ -29,6 +29,7 @@ public EchoServer(int portnum)
 				{
 				line = r.readLine();
 					if ( line != null )
+					System.out.println("client says: "+line);
 						w.println("Got: "+ line);
 				}
 				while ( !line.trim().equals("bye") );
@@ -42,10 +43,9 @@ public EchoServer(int portnum)
 	}
 	public static void main(String[] args)
 	{
-		EchoServer s = new EchoServer(9999);
+		EServer s = new EServer(9999);
 		s.serve();
 	}
 
 	private ServerSocket server;
 }
-
